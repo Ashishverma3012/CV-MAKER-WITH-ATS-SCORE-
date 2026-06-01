@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   User, Briefcase, GraduationCap, Code, FileText, CheckCircle, AlertTriangle, 
   Download, Eye, Edit3, ArrowRight, Github, Mail, Phone, MapPin, Plus, 
-  Trash2, Award, Zap, Check, Moon, Sun, ArrowLeft, ExternalLink, Globe, Linkedin 
+  Trash2, Award, Zap, Check, Moon, Sun, ArrowLeft, ExternalLink, Globe, Linkedin, Instagram 
 } from 'lucide-react';
 
 /* -------------------------------------------------------------
@@ -13,7 +13,7 @@ const INITIAL_RESUME_DATA = {
     fullName: "Ashish Kumar",
     title: "Software & Web Developer",
     email: "ashishv56789@gmail.com",
-    phone: "7048922841",
+    phone: "7048*****",
     location: "Ghaziabad, Uttar Pradesh",
     github: "github.com/Ashishverma3012",
     linkedin: "linkedin.com/in/ashish-kumar-769a913a1",
@@ -688,11 +688,12 @@ export default function App() {
                   </p>
                   <div style={{ display: 'flex', gap: '16px', marginTop: '12px' }}>
                     <a href={`mailto:${resumeData.personalInfo.email}`} className="contact-card-icon" style={{ width: '40px', height: '40px' }} title="Email"><Mail size={18} /></a>
-                    <a href={`tel:${resumeData.personalInfo.phone}`} className="contact-card-icon" style={{ width: '40px', height: '40px' }} title="Phone"><Phone size={18} /></a>
+                    <div className="contact-card-icon" style={{ width: '40px', height: '40px', cursor: 'default' }} title="Phone (Masked for Privacy)"><Phone size={18} /></div>
                     <a href={`https://${resumeData.personalInfo.github}`} target="_blank" rel="noopener noreferrer" className="contact-card-icon" style={{ width: '40px', height: '40px' }} title="GitHub"><Github size={18} /></a>
                     {resumeData.personalInfo.linkedin && (
                       <a href={`https://${resumeData.personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="contact-card-icon" style={{ width: '40px', height: '40px' }} title="LinkedIn"><Linkedin size={18} /></a>
                     )}
+                    <a href="https://share.google/DEUwJzgDHIKUXPHMZ" target="_blank" rel="noopener noreferrer" className="contact-card-icon" style={{ width: '40px', height: '40px' }} title="Instagram"><Instagram size={18} /></a>
                   </div>
                 </div>
 
@@ -890,6 +891,20 @@ export default function App() {
                         </div>
                       </div>
                     )}
+
+                    <div className="contact-card-item">
+                      <div className="contact-card-icon">
+                        <Instagram size={22} />
+                      </div>
+                      <div className="contact-card-details">
+                        <h4>Instagram Connection</h4>
+                        <p>
+                          <a href="https://share.google/DEUwJzgDHIKUXPHMZ" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>
+                            share.google/DEUwJzgDH...
+                          </a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
