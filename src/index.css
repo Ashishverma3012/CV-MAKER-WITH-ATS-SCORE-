@@ -474,37 +474,193 @@ textarea.form-input {
   gap: 18px;
 }
 
-/* Templates styles */
-/* Executive Slate Theme */
+/* -------------------------------------------------------------
+   TEMPLATE 1: SLATE EXECUTIVE (Corporate, Balanced & Traditional)
+   ------------------------------------------------------------- */
 .resume-sheet.template-slate {
-  border-top: 6px solid #334155;
+  font-family: 'Inter', sans-serif;
+  border-top: 8px solid #334155;
+  border-bottom: 8px solid #334155;
+  padding: 45px 50px;
+}
+.resume-sheet.template-slate .resume-header {
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px double #cbd5e1;
+  padding-bottom: 16px;
+  margin-bottom: 14px;
+}
+.resume-sheet.template-slate .header-title h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.3rem;
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.resume-sheet.template-slate .header-title p {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #475569;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 .resume-sheet.template-slate h2.section-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
   color: #334155;
-  border-bottom: 1.5px solid #cbd5e1;
+  border-bottom: 1.5px solid #94a3b8;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.resume-sheet.template-slate .entry-primary {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #0f172a;
+}
+.resume-sheet.template-slate .skills-category-name {
+  font-family: 'Georgia', serif;
+  color: #334155;
+}
+.resume-sheet.template-slate .entry-bullets {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-/* Tech Cobalt Theme */
+/* -------------------------------------------------------------
+   TEMPLATE 2: TECH COBALT (Modern Tech, Monospace & Sidebar Accent)
+   ------------------------------------------------------------- */
 .resume-sheet.template-tech {
-  border-top: 6px solid #1d4ed8;
+  font-family: 'Inter', sans-serif;
+  border-left: 8px solid #1d4ed8;
+  border-top: none;
+  padding: 45px 45px;
 }
-.resume-sheet.template-tech h2.section-title {
-  color: #1d4ed8;
-  border-bottom: 1.5px solid #bfdbfe;
+.resume-sheet.template-tech .resume-header {
+  align-items: flex-start;
+  text-align: left;
+  border-bottom: 2px solid #eff6ff;
+  padding-bottom: 16px;
+  margin-bottom: 14px;
 }
 .resume-sheet.template-tech .header-title h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.4rem;
   color: #1e3a8a;
+  font-weight: 900;
+  letter-spacing: -0.03em;
 }
-
-/* Classic Minimalist Theme */
-.resume-sheet.template-minimal {
-  border-top: 6px solid #171717;
+.resume-sheet.template-tech .header-title p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  color: #1d4ed8;
+  letter-spacing: 0.05em;
 }
-.resume-sheet.template-minimal h2.section-title {
-  color: #171717;
-  border-bottom: 1.5px solid #e5e5e5;
+.resume-sheet.template-tech h2.section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  color: #1d4ed8;
+  background-color: #eff6ff;
+  padding: 6px 12px;
+  border-radius: var(--radius-xs);
+  border-bottom: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.resume-sheet.template-tech .entry-primary {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  color: #1e3a8a;
+  font-weight: 800;
+}
+.resume-sheet.template-tech .skills-category-name {
+  font-family: 'JetBrains Mono', monospace;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+}
+.resume-sheet.template-tech .entry-bullets {
+  border-left: 2px dashed #bfdbfe;
+  padding-left: 16px;
+  margin-left: 6px;
+  list-style-type: none;
+}
+.resume-sheet.template-tech .entry-bullets li {
+  position: relative;
+  margin-bottom: 5px;
+}
+.resume-sheet.template-tech .entry-bullets li::before {
+  content: "⚡ ";
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------
+   TEMPLATE 3: CLASSIC MINIMAL (Sleek, Editorial & High Density)
+   ------------------------------------------------------------- */
+.resume-sheet.template-minimal {
+  font-family: 'Inter', sans-serif;
+  border-top: 2px solid #171717;
+  padding: 35px 40px;
+}
+.resume-sheet.template-minimal .resume-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: left;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.resume-sheet.template-minimal .header-title h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #171717;
+  letter-spacing: -0.04em;
+}
+.resume-sheet.template-minimal .header-title p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #737373;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.resume-sheet.template-minimal .header-contacts {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 0.78rem;
+  color: #737373;
+  gap: 2px;
+}
+.resume-sheet.template-minimal h2.section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #737373;
+  border-bottom: 1px solid #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+.resume-sheet.template-minimal .entry-item {
+  gap: 2px;
+}
+.resume-sheet.template-minimal .entry-primary {
+  font-size: 0.9rem;
+  color: #171717;
+}
+.resume-sheet.template-minimal .entry-secondary {
+  font-size: 0.82rem;
+  color: #737373;
+}
+.resume-sheet.template-minimal .entry-bullets {
+  list-style-type: square;
+  margin-left: 15px;
+  color: #404040;
 }
 
 /* Resume Structure inside sheet */
